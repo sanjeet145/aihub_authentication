@@ -41,6 +41,6 @@ class Login(APIView):
             return Response({"message":"Something went wrong"},status=500)
             
 
-def CronJob(APIView):
+class CronJob(APIView):
     def get(self, request):
         return Response({"message":"Cron job executed"}, status=200)
