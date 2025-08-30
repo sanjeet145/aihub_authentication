@@ -43,7 +43,7 @@ class Login(APIView):
                     return Response({"message":"login success","token":token},status=200)
             return Response({"message":"login failed"},status=400)
         except Exception as e:
-            # print(e)
+            print(e)
             return Response({"message":"Something went wrong"},status=500)
             
 
