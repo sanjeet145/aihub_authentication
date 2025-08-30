@@ -63,12 +63,18 @@ MIDDLEWARE = [
     
 ]
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    os.getenv("FRONTEND_URL"),
-]
+CORS_ALLOW_ALL_ORIGINS=True
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",
+#     "http://127.0.0.1:5173",
+#     os.getenv("FRONTEND_URL"),
+# ]
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "content-type",
+    "authorization",
+]
 
 ROOT_URLCONF = 'backend.urls'
 
