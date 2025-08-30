@@ -63,13 +63,12 @@ MIDDLEWARE = [
     
 ]
 CORS_ALLOW_ALL_ORIGINS = True
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5173",
-#     "https://aihub-frontend.onrender.com", 
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    os.getenv("FRONTEND_URL"),
+]
 CORS_ALLOW_CREDENTIALS = True
-
-
 
 ROOT_URLCONF = 'backend.urls'
 
