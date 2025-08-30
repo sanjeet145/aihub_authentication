@@ -24,12 +24,12 @@ class Login(APIView):
     def post(self, request):
         data = request.data
         try:
-            user=None
-            if data["username"] not in cache:
-                user =Users.objects.filter(username=data["username"]).first()
-                cache.set(data["username"], user, timeout=(60*30)) # 30 minutes
-            else:
-                user = cache.get(data["username"])
+            # user=None
+            # if data["username"] not in cache:
+            user =Users.objects.filter(username=data["username"]).first()
+                # cache.set(data["username"], user, timeout=(60*30)) # 30 minutes
+            # else:
+                # user = cache.get(data["username"])
             if user:
                 if(check_password( data["password"], user.password)):
                     load_dotenv()
@@ -43,7 +43,7 @@ class Login(APIView):
                     return Response({"message":"login success","token":token},status=200)
             return Response({"message":"login failed"},status=400)
         except Exception as e:
-            print(e)
+            # print(e)
             return Response({"message":"Something went wrong"},status=500)
             
 

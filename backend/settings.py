@@ -70,11 +70,11 @@ CORS_ALLOW_ALL_ORIGINS=True
 #     os.getenv("FRONTEND_URL"),
 # ]
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = [
-    "accept",
-    "content-type",
-    "authorization",
-]
+# CORS_ALLOW_HEADERS = [
+#     "accept",
+#     "content-type",
+#     "authorization",
+# ]
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -118,15 +118,15 @@ DATABASES = {
     }
 }
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.getenv("REDIS_URL"),
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": os.getenv("REDIS_URL"),
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
 
 
 # Password validation
