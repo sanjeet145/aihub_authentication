@@ -7,7 +7,7 @@ class Users(models.Model):
         ("ADMIN","admin")
     )
     id= models.AutoField(auto_created=True, serialize=False, unique=True, primary_key=True)
-    username= models.TextField(unique=True)
+    username= models.TextField(unique=True, db_index=True)
     password= models.CharField()
     email = models.EmailField(unique=True)
     number = models.IntegerField()
